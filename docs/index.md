@@ -4,7 +4,7 @@ layout: home  # 声明当前页面的模块结构为首页，默认为 page
 
 hero:
   name: "Lucas-blog"  # 主标题
-  text: "share knowlege of front-end "  # 副标题
+  text: "welcome to my blog "  # 副标题
   tagline: My great project tagline  # 小文字
   #image: #  图片区
   #src: /home/home-banner.jpg # 小文字
