@@ -8,33 +8,46 @@ on:
     branches:
       - master
   workflow_dispatch:
+
 # 各个脚本节点命令
 jobs:
   deploy-and-sync:
     # 执行环境为linux的ubuntu系统
     runs-on: ubuntu-latest
+    
+    # 添加环境变量
+    env:
+      NODE_ENV: production
+      ESBUILD_BINARY_PATH: "node_modules/esbuild/bin/esbuild"
+      
     steps:
       # 从master分支拉取代码
       - name: Checkout 🛎️
         uses: actions/checkout@v4
         with:
           ref: "master"
+          
       # 安装pnpm
       - name: Install pnpm
         run: |
           corepack enable
-          corepack prepare pnpm@latest --activate
+          corepack prepare pnpm@9.15.0 --activate
       # 安装node环境
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
           cache: "pnpm"
+          
       # 使用pnpm安装依赖
       - name: Install dependencies
-        run: pnpm install
+        run: |
+          pnpm config set registry https://registry.npmmirror.com/
+          pnpm install --no-frozen-lockfile
+          
       # 打包vitepress项目
       - name: Build Site
-        run: pnpm run docs:build
+        run: pnpm run build
+        
       # 将打包后dist里的产物提交到prod分支
       - name: Deploy for Github 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
