@@ -7,7 +7,7 @@ hero:
   text: "share my front end experience"  # 副标题
   tagline: "Every achievement comes from every day's effort" # 小文字
   #image: #  图片区
-  src: /home/home.jpg # 小文字
+  src: /home/home-banner.jpg # 小文字
   #alt: 加载失败 # 小文字
   actions:
     - theme: brand
@@ -20,7 +20,7 @@ hero:
 features:
   - title: Web Develoment
     details: Vue、 React、 ts konwledge
-  - title: Mobile development
+  - title: Mobile Development
     details: uniapp knowledge
   - title: Other
     details: git、framework、 tools
