@@ -4,10 +4,10 @@ layout: home  # 声明当前页面的模块结构为首页，默认为 page
 
 hero:
   name: "Lucas-Blog"  # 主标题
-  text: "welcome to my blog "  # 副标题
-  tagline: My great project tagline  # 小文字
+  text: "share my front end experience"  # 副标题
+  tagline: "Every achievement comes from every day's effort" # 小文字
   #image: #  图片区
-  #src: /home/home-banner.jpg # 小文字
+  src: /home/home.jpg # 小文字
   #alt: 加载失败 # 小文字
   actions:
     - theme: brand
@@ -18,11 +18,11 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Web Develoment
+    details: Vue、 React、 ts konwledge
+  - title: Mobile development
+    details: uniapp knowledge
+  - title: Other
+    details: git、framework、 tools
 ---
 
