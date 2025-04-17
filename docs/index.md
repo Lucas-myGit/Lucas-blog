@@ -6,8 +6,9 @@ hero:
   name: "Lucas-Blog"  # 主标题
   text: "share my front end experience"  # 副标题
   tagline: "Every achievement comes from every day's effort" # 小文字
-  #image: #  图片区
-  src: /public/home/home-banner.jpg # 小文字
+  image:
+    src: /home/home-banner.jpg
+    alt: 加载失败
   #alt: 加载失败 # 小文字
   actions:
     - theme: brand
